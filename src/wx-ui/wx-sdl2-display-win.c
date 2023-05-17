@@ -756,6 +756,9 @@ int render() {
         } else if ((rawinputkey[sdl_scancode(SDL_SCANCODE_END)] || rawinputkey[sdl_scancode(SDL_SCANCODE_KP_1)]) &&
                    (rawinputkey[sdl_scancode(SDL_SCANCODE_LCTRL)] || rawinputkey[sdl_scancode(SDL_SCANCODE_RCTRL)]))
                 trigger_inputrelease = 1;
+        else if (rawinputkey[sdl_scancode(SDL_SCANCODE_LALT)] &&
+                 (rawinputkey[sdl_scancode(SDL_SCANCODE_LCTRL)] || rawinputkey[sdl_scancode(SDL_SCANCODE_RCTRL)]))
+                trigger_inputrelease = 1;
         else if (trigger_inputrelease) {
                 trigger_inputrelease = 0;
                 if (!is_fullscreen())

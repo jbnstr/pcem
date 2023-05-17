@@ -529,8 +529,8 @@ void runpc() {
                         models[model]->cpu[cpu_manufacturer].cpus[cpu].name,
                         (!mousecapture) ? "Click to capture mouse"
                                         : ((mouse_get_type(mouse_type) & MOUSE_TYPE_3BUTTON)
-                                                   ? "Press CTRL-END to release mouse"
-                                                   : "Press CTRL-END or middle button to release mouse"));
+                                                   ? "Press CTRL-ALT to release mouse"
+                                                   : "Press CTRL-ALT or middle button to release mouse"));
 #ifdef __APPLE__
                 // Needed due to modifying the UI on the non-main thread is a big no-no.
                 dispatch_async_f(dispatch_get_main_queue(), strdup(s), _set_window_title);
